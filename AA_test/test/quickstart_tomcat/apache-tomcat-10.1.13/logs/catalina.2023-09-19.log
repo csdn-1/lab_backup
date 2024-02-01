@@ -1,0 +1,67 @@
+19-Sep-2023 00:31:49.248 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/10.1.13
+19-Sep-2023 00:31:49.250 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Aug 23 2023 21:34:59 UTC
+19-Sep-2023 00:31:49.251 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      10.1.13.0
+19-Sep-2023 00:31:49.251 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Linux
+19-Sep-2023 00:31:49.251 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           3.10.0-1160.el7.x86_64
+19-Sep-2023 00:31:49.251 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+19-Sep-2023 00:31:49.251 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     /usr/java/jdk-16.0.2
+19-Sep-2023 00:31:49.251 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    16.0.2+7-67
+19-Sep-2023 00:31:49.251 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+19-Sep-2023 00:31:49.251 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13
+19-Sep-2023 00:31:49.251 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13
+19-Sep-2023 00:31:49.260 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/conf/logging.properties
+19-Sep-2023 00:31:49.260 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Sep-2023 00:31:49.260 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Xmx1G
+19-Sep-2023 00:31:49.260 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -ea
+19-Sep-2023 00:31:49.260 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+19-Sep-2023 00:31:49.260 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Sep-2023 00:31:49.261 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Sep-2023 00:31:49.261 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Sep-2023 00:31:49.261 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.io=ALL-UNNAMED
+19-Sep-2023 00:31:49.261 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.util=ALL-UNNAMED
+19-Sep-2023 00:31:49.261 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Sep-2023 00:31:49.261 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Sep-2023 00:31:49.261 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13
+19-Sep-2023 00:31:49.261 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13
+19-Sep-2023 00:31:49.261 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/temp
+19-Sep-2023 00:31:49.396 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-17665"]
+19-Sep-2023 00:31:49.409 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[265]毫秒内初始化
+19-Sep-2023 00:31:49.426 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+19-Sep-2023 00:31:49.426 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/10.1.13]
+19-Sep-2023 00:31:49.442 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR 正在部署web应用程序存档文件[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/retrieval.war]
+19-Sep-2023 00:31:50.905 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+19-Sep-2023 00:31:50.906 严重 [main] org.apache.catalina.core.StandardContext.startInternal 一个或多个listeners启动失败，更多详细信息查看对应的容器日志文件
+19-Sep-2023 00:31:50.909 严重 [main] org.apache.catalina.core.StandardContext.startInternal 由于之前的错误，Context[/retrieval]启动失败
+19-Sep-2023 00:31:50.917 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR web应用程序存档文件[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/retrieval.war]的部署已在[1,473]ms内完成
+19-Sep-2023 00:31:50.918 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR 正在部署web应用程序存档文件[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/mgmt.war]
+19-Sep-2023 00:31:51.807 信息 [main] java.util.ArrayList.forEach Name = archappl Ignoring unknown property: value of "DB Connection" for "description" property
+19-Sep-2023 00:31:51.826 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+19-Sep-2023 00:31:51.827 严重 [main] org.apache.catalina.core.StandardContext.startInternal 一个或多个listeners启动失败，更多详细信息查看对应的容器日志文件
+19-Sep-2023 00:31:51.827 严重 [main] org.apache.catalina.core.StandardContext.startInternal 由于之前的错误，Context[/mgmt]启动失败
+19-Sep-2023 00:31:51.830 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR web应用程序存档文件[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/mgmt.war]的部署已在[912]ms内完成
+19-Sep-2023 00:31:51.831 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR 正在部署web应用程序存档文件[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/engine.war]
+19-Sep-2023 00:31:52.927 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+19-Sep-2023 00:31:52.928 严重 [main] org.apache.catalina.core.StandardContext.startInternal 一个或多个listeners启动失败，更多详细信息查看对应的容器日志文件
+19-Sep-2023 00:31:52.928 严重 [main] org.apache.catalina.core.StandardContext.startInternal 由于之前的错误，Context[/engine]启动失败
+19-Sep-2023 00:31:52.930 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR web应用程序存档文件[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/engine.war]的部署已在[1,099]ms内完成
+19-Sep-2023 00:31:52.931 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR 正在部署web应用程序存档文件[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/etl.war]
+19-Sep-2023 00:31:53.995 信息 [main] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+19-Sep-2023 00:31:53.996 严重 [main] org.apache.catalina.core.StandardContext.startInternal 一个或多个listeners启动失败，更多详细信息查看对应的容器日志文件
+19-Sep-2023 00:31:53.996 严重 [main] org.apache.catalina.core.StandardContext.startInternal 由于之前的错误，Context[/etl]启动失败
+19-Sep-2023 00:31:53.998 信息 [main] org.apache.catalina.startup.HostConfig.deployWAR web应用程序存档文件[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/etl.war]的部署已在[1,067]ms内完成
+19-Sep-2023 00:31:53.999 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/host-manager]
+19-Sep-2023 00:31:54.022 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/host-manager]的部署已在[23]毫秒内完成
+19-Sep-2023 00:31:54.022 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/manager]
+19-Sep-2023 00:31:54.033 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/manager]的部署已在[10]毫秒内完成
+19-Sep-2023 00:31:54.033 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/examples]
+19-Sep-2023 00:31:54.118 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/examples]的部署已在[85]毫秒内完成
+19-Sep-2023 00:31:54.118 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/ROOT]
+19-Sep-2023 00:31:54.126 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/ROOT]的部署已在[8]毫秒内完成
+19-Sep-2023 00:31:54.126 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/docs]
+19-Sep-2023 00:31:54.135 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/home/zmq/lzy/AA_test/test/quickstart_tomcat/apache-tomcat-10.1.13/webapps/docs]的部署已在[8]毫秒内完成
+19-Sep-2023 00:31:54.137 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-17665"]
+19-Sep-2023 00:31:54.145 信息 [main] org.apache.catalina.startup.Catalina.start [4735]毫秒后服务器启动
+19-Sep-2023 00:39:22.338 信息 [Thread-1] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-17665"]
+19-Sep-2023 00:39:22.343 信息 [Thread-1] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+19-Sep-2023 00:39:22.363 信息 [Thread-1] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-17665"]
+19-Sep-2023 00:39:22.379 信息 [Thread-1] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-17665"]

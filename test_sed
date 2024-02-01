@@ -1,0 +1,68 @@
+#!../../bin/linux-x86_64/bunchid_server
+
+#- You may have to change bunchid_server to something else
+#- everywhere it appears in this file
+
+< envPaths
+
+cd "${TOP}"
+
+## Register all support components
+dbLoadDatabase "dbd/bunchid_server.dbd"
+bunchid_server_registerRecordDeviceDriver pdbbase
+
+cd "${TOP}"
+epicsEnvSet("STREAM_PROTOCOL_PATH", ".:../protocol")
+
+# This is the local TCP port that for clients to connect to
+epicsEnvSet LOCAL_IP_PORT 4001
+
+# This is the name of the asyn port driver that listens for connections
+epicsEnvSet ASYN_LISTEN_PORT P4001
+
+# This is the name of the first drvAsynIPPort TCP driver that will be created
+epicsEnvSet ASYN_UDP_PORT1 P4001:0
+epicsEnvSet ASYN_UDP_PORT2 P4001:1
+
+## Load record instances
+#dbLoadTemplate "db/user.substitutions"
+#dbLoadRecords "db/bunchid_serverVersion.db", "user=zmq"
+#dbLoadRecords "db/dbSubExample.db", "user=zmq"
+dbLoadRecords("db/bunchID.db", "bSize=64,user=zmq,P=myIPServer,PORT1=$(ASYN_UDP_PORT1),PORT2=$(ASYN_UDP_PORT2)")
+
+##drvAsynIPPortConfigure("IDMachine", "10.19.53.109:9011", 0, 0, 0)
+
+
+# The following command starts a server on port 4001
+drvAsynIPServerPortConfigure("$(ASYN_LISTEN_PORT)","10.19.53.119:4001 udp",2,0,0,0)
+
+#tmp close
+# asynSetTraceMask("$(ASYN_LISTEN_PORT)",-1,0x3f) 
+##asynSetTraceMask("$(ASYN_LISTEN_PORT)",-1,0x3F) 
+#asynSetTraceIOMask("$(ASYN_LISTEN_PORT)",-1,0x5)
+# asynSetTraceInfoMask("$(ASYN_LISTEN_PORT)",-1,0xF)
+
+
+#asynSetTraceIOMask("$(ASYN_LISTEN_PORT)", -1, 0x2)
+#asynSetTraceMask("$(ASYN_LISTEN_PORT)", -1, 0xff)
+#asynSetTraceIOMask("$(ASYN_TCP_PORT)", -1, 0x2)
+#asynSetTraceMask("$(ASYN_TCP_PORT)", -1, 0x9)
+
+#asynSetTraceIOMask("P5001:0",-1,0xFF)
+
+##asynSetTraceIOTruncateSize("IDMachine",-1, 4096)
+
+#asynOctetSetInputEos("$(ASYN_TCP_PORT)", 0, "\r\n")
+#asynOctetSetOutputEos("$(ASYN_TCP_PORT)", 0, "\r\n")
+
+#- Set this to see messages from mySub
+#var mySubDebug 1
+
+#- Run this to trace the stages of iocInit
+#traceIocInit
+
+cd "${TOP}/iocBoot/${IOC}"
+iocInit
+
+## Start any sequence programs
+#seq sncExample, "user=zmq"

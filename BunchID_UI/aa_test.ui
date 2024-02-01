@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1222</width>
+    <height>651</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="PyDMArchiverTimePlot" name="PyDMArchiverTimePlot">
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+      </stringlist>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;useArchiveData&quot;: false, &quot;channel&quot;: &quot;archiver://myIPServer:FrameNum&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;myIPServer:FrameNum&quot;, &quot;color&quot;: &quot;black&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMTimePlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.timeplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMArchiverTimePlot</class>
+   <extends>PyDMTimePlot</extends>
+   <header>pydm.widgets.archiver_time_plot</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

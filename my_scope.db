@@ -1,0 +1,115 @@
+record(stringout, "CH$(CH):PRST") {
+  field(DESC, "Initial instrument to the preset value")
+  field(PINI, "YES")
+  field(DTYP, "stream")
+  field(OUT, "@my_scope.proto preset($(CH)) $(PORT)")
+}
+
+# record(bo, "CH$(CH):WAV_DATA_query") {
+#   field(DESC, "Get waveform data(Y)")
+#   field(DTYP, "stream")
+#   field(OUT, "@my_scope.proto queryWAVDATA() $(PORT)")
+#   # field(NELM, "$(POINTS)")
+#   # field(FTVL, "SHORT")
+#   # field(SCAN, "I/O Intr")
+#   field(SCAN,".1 second")
+#   # field(SCAN,".1 second")
+#   # field(FLNK, "CH$(CH):Y_INC")
+#   # field(FLNK, "CH$(CH):POINTS")
+#   # field(FLNK, "CH$(CH):WAV_DATA")
+# }
+
+# record(waveform, "CH$(CH):WAV_DATA") {
+#   field(DESC, "Get waveform data(Y)")
+#   field(DTYP, "stream")
+#   field(INP, "@my_scope.proto getWAVDATA() $(PORT)")
+#   field(NELM, "$(POINTS)")
+#   field(FTVL, "SHORT")
+#   # field(SCAN, "I/O Intr")
+#   # field(SCAN,"50 Hz")
+#   field(SCAN,".1 second")
+#   # field(FLNK, "CH$(CH):Y_INC")
+#   # field(FLNK, "CH$(CH):POINTS")
+# }
+
+
+record(waveform, "CH$(CH):WAV_DATA") {
+  field(DESC, "Get waveform data(Y)")
+  field(DTYP, "stream")
+  field(INP, "@my_scope.proto getWAVDATA() $(PORT)")
+  field(NELM, "$(POINTS)")
+  field(FTVL, "SHORT")
+  # field(SCAN, "I/O Intr")
+  # field(SCAN,"50 Hz")
+  field(SCAN,".1 second")
+  field(FLNK, "CH$(CH):Y_INC")
+  # field(FLNK, "CH$(CH):POINTS")
+}
+
+record(ai, "CH$(CH):Y_INC") {
+  field(DESC, "Get channel $(CH) y increment")
+  field(DTYP, "stream")
+  field(INP, "@my_scope.proto getG(WAVeform:YINCrement) $(PORT)")
+  field(FLNK, "CH$(CH):Y_ORIGIN")
+}
+
+record(ai, "CH$(CH):Y_ORIGIN") {
+  field(DESC, "Get channel $(CH) y orgin")
+  field(DTYP, "stream")
+  field(INP, "@my_scope.proto getG(WAVeform:YORigin) $(PORT)")
+  field(FLNK, "CH$(CH):X_INC")
+}
+
+record(ai, "CH$(CH):X_INC") {
+  field(DESC, "Get channel $(CH) x increment")
+  field(DTYP, "stream")
+  field(FLNK, "CH$(CH):X_ORIGIN")
+  field(INP, "@my_scope.proto getG(WAVeform:XINCrement) $(PORT)")
+}
+
+record(ai, "CH$(CH):X_ORIGIN") {
+  field(DESC, "Get channel $(CH) x origin")
+  field(DTYP, "stream")
+  field(FLNK, "CH$(CH):POINTS")
+  field(INP, "@my_scope.proto getG(WAVeform:XORigin) $(PORT)")
+}
+
+record(longin,"CH$(CH):POINTS"){
+  field(DESC,"Points of the wave")
+  field(DTYP, "stream")
+  field(INP,"@my_scope.proto getU(WAVeform:POINTs) $(PORT)")
+  field(FLNK, "CH$(CH):CALC")
+}
+
+record(aSub, "CH$(CH):CALC") {
+  field(DESC, "Convert Y wave data to actual value")
+  field(SNAM, "wave_calc")
+  field(INPA, "CH$(CH):WAV_DATA NPP NMS")
+  field(FTA, "SHORT")
+  field(NOA, "$(POINTS)")
+  field(INPB, "CH$(CH):Y_INC NPP NMS")
+  field(INPC, "CH$(CH):Y_ORIGIN NPP NMS")
+  field(INPD, "CH$(CH):X_INC NPP NMS")
+  field(INPE, "CH$(CH):X_ORIGIN NPP NMS")
+  field(INPF, "CH$(CH):POINTS NPP NMS")
+  field(OUTA, "CH$(CH):WAV_Y")
+  field(OUTB, "CH$(CH):WAV_X")
+  field(NOVA, "$(POINTS)")
+  field(NOVB, "$(POINTS)")
+  field(FLNK, "CH$(CH):WAV_Y")
+}
+
+record(waveform, "CH$(CH):WAV_Y") {
+  field(DESC, "Actual wave value(Y)")
+  field(DTYP, "Soft Channel")
+  field(FTVL, "DOUBLE")
+  field(NELM, "$(POINTS)")
+  field(FLNK, "CH$(CH):WAV_X")
+}
+
+record(waveform, "CH$(CH):WAV_X") {
+  field(DESC, "Time on the x-axis")
+  field(DTYP, "Soft Channel")
+  field(NELM, "$(POINTS)")
+  field(FTVL, "DOUBLE")
+}

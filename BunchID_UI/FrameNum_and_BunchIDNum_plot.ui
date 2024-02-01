@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1493</width>
+    <height>801</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="PyDMTimePlot" name="PyDMTimePlot_2">
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="backgroundBrush">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="showXGrid">
+      <bool>false</bool>
+     </property>
+     <property name="showYGrid">
+      <bool>false</bool>
+     </property>
+     <property name="yAxes">
+      <stringlist>
+       <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+       <string>{&quot;name&quot;: &quot;Axis 2&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1500.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+      </stringlist>
+     </property>
+     <property name="xLabels">
+      <stringlist>
+       <string>Time</string>
+       <string></string>
+      </stringlist>
+     </property>
+     <property name="showLegend">
+      <bool>true</bool>
+     </property>
+     <property name="curves">
+      <stringlist>
+       <string>{&quot;channel&quot;: &quot;ca://${P}:FrameNum&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;${P}:FrameNum&quot;, &quot;color&quot;: &quot;red&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+       <string>{&quot;channel&quot;: &quot;ca://${P}:BunchIDNum&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;${P}:BunchIDNum&quot;, &quot;color&quot;: &quot;#aa55ff&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 2&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+      </stringlist>
+     </property>
+     <property name="bufferSize">
+      <number>2000</number>
+     </property>
+     <property name="updateMode" stdset="0">
+      <enum>PyDMTimePlot::AtFixedRate</enum>
+     </property>
+     <property name="timeSpan">
+      <double>2000.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMTimePlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.timeplot</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,29 @@
+[
+    {
+        "meta": {
+            "name": "myIPServer:End",
+            "PREC": "0"
+        },
+        "data": [
+            {
+                "secs": 1697123734,
+                "val": 0,
+                "nanos": 201241635,
+                "severity": 0,
+                "status": 0,
+                "fields": {
+                    "cnxlostepsecs": "0",
+                    "startup": "true",
+                    "cnxregainedepsecs": "1697128235"
+                }
+            },
+            {
+                "secs": 1697128263,
+                "val": -559038737,
+                "nanos": 555768429,
+                "severity": 0,
+                "status": 0
+            }
+        ]
+    }
+]

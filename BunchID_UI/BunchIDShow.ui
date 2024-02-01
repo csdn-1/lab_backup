@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1283</width>
+    <height>960</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="main_title">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 75 18pt &quot;Open Sans Extrabold&quot;;
+    qproperty-alignment: AlignCenter;
+    border: 1px solid #FF17365D;
+    border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+    background-color: #FF17365D;
+    padding: 5px 0px;
+    color: rgb(255, 255, 255);
+    max-height: 25px;
+    font-size: 20px;
+}</string>
+     </property>
+     <property name="text">
+      <string>BunchID接收系统</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineEdit_IP"/>
+       </item>
+       <item row="5" column="0" colspan="3">
+        <widget class="QLabel" name="label_Status">
+         <property name="text">
+          <string>Status:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="3">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="pushButton_run">
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color:green;
+} 
+
+QPushButton:pressed {
+	padding-left:6px;
+	padding-top:6px;
+	border:1px solid #f8878f;
+}</string>
+           </property>
+           <property name="text">
+            <string>Run IOC and Plot</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_stop">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color:red;
+} 
+
+QPushButton:pressed {
+	padding-left:6px;
+	padding-top:6px;
+	border:1px solid #f8878f;
+}</string>
+           </property>
+           <property name="text">
+            <string>Stop IOC</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_showAA">
+           <property name="styleSheet">
+            <string notr="true">QPushButton:pressed {
+	padding-left:6px;
+	padding-top:6px;
+	border:1px solid #f8878f;
+}</string>
+           </property>
+           <property name="text">
+            <string>Show AA Record</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEdit_bSize"/>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="pushButton_bSize">
+         <property name="text">
+          <string>Update bSize</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QPushButton" name="pushButton_IP">
+         <property name="text">
+          <string>Update IP</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="3">
+        <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay1">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="macros" stdset="0">
+          <string>{&quot;P&quot;:&quot;myIPServer&quot;}</string>
+         </property>
+         <property name="filename" stdset="0">
+          <string>FrameNum_and_BunchIDNum_plot.ui</string>
+         </property>
+         <property name="loadWhenShown" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="disconnectWhenHidden" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_IP">
+         <property name="text">
+          <string>Enter the IP of the sending device: </string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_bSize">
+         <property name="text">
+          <string>Enter an integer for bSize:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="3">
+        <widget class="PyDMArchiverTimePlot" name="PyDMArchiverTimePlot">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="backgroundBrush">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="yAxes">
+          <stringlist>
+           <string>{&quot;name&quot;: &quot;Axis 1&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;myIPServer:BunchID&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+          </stringlist>
+         </property>
+         <property name="xLabels">
+          <stringlist>
+           <string>Time from Start (s)</string>
+          </stringlist>
+         </property>
+         <property name="showLegend">
+          <bool>false</bool>
+         </property>
+         <property name="timeSpan">
+          <double>60.000000000000000</double>
+         </property>
+         <property name="curves">
+          <stringlist>
+           <string>{&quot;useArchiveData&quot;: false, &quot;channel&quot;: &quot;archiver://myIPServer:FrameNum&quot;, &quot;plot_style&quot;: null, &quot;name&quot;: &quot;myIPServer:FrameNum&quot;, &quot;color&quot;: &quot;black&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10, &quot;yAxisName&quot;: &quot;Axis 1&quot;, &quot;barWidth&quot;: null, &quot;upperThreshold&quot;: null, &quot;lowerThreshold&quot;: null, &quot;thresholdColor&quot;: &quot;white&quot;}</string>
+          </stringlist>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="main_bottom">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 75 11pt &quot;Open Sans Extrabold&quot;;
+    qproperty-alignment: AlignRight;
+    border: 1px solid #FF17365D;
+    border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+    background-color: #FF17365D;
+    padding: 5px 0px;
+    color: rgb(255, 255, 255);
+    max-height: 25px;
+}</string>
+     </property>
+     <property name="text">
+      <string>版权所有@上海科技大学高性能数据处理实验室    </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMTimePlot</class>
+   <extends>QGraphicsView</extends>
+   <header>pydm.widgets.timeplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMArchiverTimePlot</class>
+   <extends>PyDMTimePlot</extends>
+   <header>pydm.widgets.archiver_time_plot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMEmbeddedDisplay</class>
+   <extends>QFrame</extends>
+   <header>pydm.widgets.embedded_display</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

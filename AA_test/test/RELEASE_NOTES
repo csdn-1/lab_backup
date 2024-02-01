@@ -1,0 +1,647 @@
+734f31f Switch to semantic versioning.
+51f73ab Merge pull request #58 from ESSICS/issue41
+f2c6514 Merge pull request #104 from pklaus/mgmt-archivepv-typos
+1bdb629 Merge pull request #122 from dls-controls/optim_event_fields
+8bd9411 Merge pull request #127 from shroffk/master
+2343d5e Merge branch 'dls-controls-retired-pv-retrieval'
+45752d8 Merge branch 'retired-pv-retrieval' of github.com:dls-controls/epicsarchiverap into dls-controls-retired-pv-retrieval
+61e79bc Add SQLite documentation
+f39af04 Add some example data for SCAN PVs
+b448b34 Merge pull request #128 from mdavidsaver/sqlite
+18d194c Copy over the PVAccess and DBEProps setting when cloning PVTypeInfos
+16bf7e9 Initial version of SQLite support
+d844ccf Quickstart.sh fixes ( thanks Pete )
+58ea563 Option to persist with sqlite
+d3dd9cc Update EPICS jars
+65fc03e Add a new instance specific BPL to restart the archive workflow thread for just this instance.
+5050ba1 #133
+5107ad9 Upgraded EPICS jars to latest from Maven central
+0dd57fc Use the mergeDuringRetrieval for remote fetching as well
+0fcc201 Cater to black hole plugins for failover.
+527d970 Remove repeated code
+8015b1a Add retrieval for retired PV without template
+c08d86c Add some documentation on packet capture
+af01322 Make the Mysql host configurable.
+d1b64dc Update the JDK being used in the docs.
+7b4ffcf Add documentation for redundancy
+3a65f2c #124 - Add number of samples to MetaInfo
+eaad741 Delete temp files on getting exception during convert.
+7a3869e Compute and cache FieldsArchivedAsPartOfStream
+21b9bba Use a synchronized hashmap instead of a ConcurrentHashMap.
+353b953 Bulk load typeinfos on startup.
+5c43e8e Exception when calling NCount
+e80da15 Check to see if remote has data before calling the conversion function.
+517ea28 Start time and end time as part of conversion
+d798547 Add a BPL method just to get the PVTypeInfo keys
+e01618f Add all parameters when proxying mergeInData to correct appliance
+a13e29a Initial support for failover.
+0bf3369 Adding null check to OpimizedWithLastSample postprocessor.
+7e55182 Fixing minor bug in OpimizedWithLastSample postprocessor where object could be null.
+be586c3 Retaining the event fields when the optim and optimLastSample postprocessors return the equivalent of the raw data as no binning is needed.
+2b19e65 Small utility to change the name in the PBFileInfo in a .pb file
+76e806c Merge pull request #118 from dls-controls/postprocessor_rawdata_bug
+a8de5d0 Merge pull request #117 from dls-controls/optimLastSample_bugFix
+550a330 Fixing a bug where a year change is not caught when the postprocessors end up returning the raw data.
+9c70321 Fixing a bug to handle the case where the last bins in a timeframe contain no events so that they inherit the last event value from the last bin to have an event. This edge case was not previously handled.
+997842b Fix for unit tests
+41be27e Send DBRTimeevent on value update and eliminate the getter
+5821fa6 Changes to support adding more details in PVDetails without carrying over in PVMetrics
+c0f8190 Add a BPL to get all the aliases
+25a8588 Add an initial version of a slow changing PV with dropped events report.
+ebe0339 Email to storage report
+ce34231 Add a storage size check
+44b62c2 Add a script to list PV's that have changed type
+5f6517f Add dbrtype to the waveform report
+8f737c3 Merge pull request #112 from dls-controls/optWithLastSample
+8b854b9 Add more detailed comment.
+2d91b9d Adding a new PostProcessor to provide binning optimized using the last sample.
+fe42aea Update the abort never connected PV's to use requests
+db1ac35 Relax the archive state when aborting PV's after a timeout.
+5f15148 Sometimes the archive PV workflow gets stuck in ARCHIVE_REQUEST_SUBMITTED; somehow related to aliases
+48fe96b Add a script to resume PV's matching a pattern
+81e7a38 Add a script to consolidate all paused PVs.
+33b8f48 Small utility cor debugging.
+7de0910 typo fix: Writter -> Writer
+481da88 More details for V3 PV internal state
+12993de Reduce logging if JSON for archive params cannot be parsed.
+8500e78 Larger buffer for EPICS PVAccess
+4ce5984 Add EPICS 7 documentation
+2f066de Change the location of Han's site specific bundle
+6945c32 Missing & before skipExternalServers
+649cc2a Typo in the javadoc
+f279dd4 fixed typos in mgmt/archivepv
+570c719 Support for append+alias.
+40f04be Update EPICS jars to latest
+b3ef7e0 Update EPICS jars to latest
+2e4dc4f Minor bug fix for the viewer.
+e7ae65f Add timing information when deleting PVs.
+5cf6c55 Merge pull request #100 from TBirkeHZB/master
+4b53e07 honour provided ca_how properly when processing ChannelArchiver requests
+1943b00 Update the viewer to point to the latest
+4d4eb2f No need to get full array for DBE_PROPERTIES.
+74a482c Bug in log statement
+51211e2 Update SCAN/Monitor FAQ
+57fbbb2 Refactor documentation for JDK 12/Tomcat 9.
+68b1d67 Fixes #91 - getDataAtTime leaves open files
+77b5a5d Update EPICS jars.
+685c3dc Fix broken unit test
+ff176f1 Allow the ^ character in PV names for Mauro
+67ea1f0 Start changing the docs for JDK 1.12
+3a2a2fe Add a new state the archive workflow.
+6777e58 Add some log messages for CA connection establishment
+043cccd Recompile the pbrawclient for JDK 8
+4c93484 Update the pbrawclient jar
+6bf4227 Add the geckodriver to the test packages as well
+d54fbdc Use the original PV name from the request.
+c80099b 87 - Retrieval requests for PVName.VAL
+6a73628 Fix broken unit test
+36ea67d Singletest needs the wars.
+6d17cdc No need to do an explict caget for metadata for PVAccess
+578c535 HIHI's and LOLO's as well
+473e3c0 Fire an event on the PV when a value is written into the stores.
+85cf8ec Remove unsupported exception.
+ffbd6a2 Update EPICS jars to EPICS Java 7-0-2.
+d54fcce Preparation for migration to Java 12/Tomcat 9.
+2400478 Use a bitset to check for timestamp changes.
+8e53f9a The Field "value" is not an extra field.
+a706bed Log PVAccess messages at the appropriate level
+f500fd1 Increase log level for exceptions.
+3182d9e Add an extra check for empty byte arrays in example
+7b83cad Update links to Martin's VM's
+76048de Add details of the PBFileInfo to validate.sh.
+18c8c00 Fix NPE for disconnected channels on getDataAtTIme
+66e3d53 Proper support for archiveFields in policy files
+6dc1140 Fix broken Unit Test
+77a16a3 Update the viewer to the latest
+54bc2d6 Sigh! The URL for connectedPVcount changed
+29c4cf1 Merge pull request #67 from berryma4/patch-1
+da9c1f3 o.e.archiverappliance.config: change ClientConfig to XmlClientConfigBuilder
+b1a20d6 Guard against NPE's from HTTP errors and such.
+6ac139d Clean up alias/field support for getDataAtTime
+73c34ef Add a title to the doc
+10a65e0 Apologies for the previous mixup.
+954083c Revert "Revert "Return all members of the cluster for non-mgmt webapps."" Apologies for this...
+cb4e924 Revert "Return all members of the cluster for non-mgmt webapps."
+8672bb4 API for getDataAtTime
+80425ab Return all members of the cluster for non-mgmt webapps.
+9d7898e Get PV's for this appliance
+d9d8020 Typo in FAQ again
+f96d885 Typo in example for SCAN/MONITOR.
+a87e04e One more small change for the viewer
+0123e92 Update the viewer to the latest.
+2d820ef The viewer estimates sample count to skip raw mode.
+45057ef Issue# 63: The web based viewer does not show transitions correctly.
+b860ad5 #61 - PV missing alias
+7a6a82b 62 - Strange format when downloading plot as png
+ab0101f Pull in the latest svg_viewer
+451cee0 Check more than one external server for PV data request.
+05f3bd9 Skip asking for metadata from exrernal servers; template PVs and such
+bd63cf8  Support for circular references when proxying data from other appliances
+444ef97 Revert "Support for circular references when proxying data from other appliances"
+fcacfc5 Support for circular references when proxying data from other appliances
+0e6fddd Fix broken unit test....
+b3622a0 Support for mixing proxied and local PV's for multiple get calls.
+6d5abce Fix errors and warning in the PVA code.
+5eed867 Fix broken unit test.
+7275ae2 Fix broken unit test...
+6f87351 Boundary conditions in retrieval.
+ac4ea0a Merge pull request #59 from DanielCuneo/test_config_error_mess
+45d67ef added VIM swap files added /mts
+91ba2b2 missing config file is handled and appropriate message is logged
+1aa26a7 Adjust LD_LIBRARY_PATH to the right service
+45d7c72 Update hz to 3.10.1 for DLS.
+bc31a83 Merge pull request #53 from shroffk/data-retrieval
+d80c646 Add status, severity and nanos to CSV response
+e61bf72 add support for enum and cleanup pvStructure creation
+83f6e03 Mutlipv support, redoing the result struct creations
+22f0566 Turn down multget logging
+76a54e8 Use POST to pass in PV's to doGetMultiPV
+d9f5ef5 Empty out the MergeDedup consumer when are switching to a new PV.
+5f2bed4 Add a extra newline in the JSON response
+16593e7 Use a single connection for metadata..
+192ad17 remove deprecated method and adding some basic labeling
+4cb01e2 move pvStructure creation to mimeResponse
+0223190 Adding support for all scalar types
+c3eff16 add prototype timestamp, add error handling, simple cleanup mergededup
+dca07d6 Protype data retrieval pva serivce
+0ec5aa6 Get the channel provider from the configservice.
+7439e0a Better support for scalars in V4GenericBytes in the JSON response.
+e93be1b Support for scalar arrays stored in V4GenericBytes in the JSON response.
+9d20a6b Point to latest viewer
+a52d846 Point to latest svg_viewer
+f86a87b Calendar is deprecated...
+bb2459c Change the name of pva test cases in suites.
+3db6c0d Update the viewer to the latest support jar.
+18f019d Merge pull request #48 from shroffk/master
+be08491 Merge pull request #44 from willrogers/pbcount
+40a37fb Default the how to 3....
+4765f88 javadocs & example request and result structures for the mgmt service
+a81798f Honor ca_how in calls to Channel Archiver
+1bfe1b8 cleanup : merge the nturi and nttable arg based services into one
+8d807f8 Adding new action for fetching archive pv status
+45034be Set the element count in the CA plugin.
+12160bb Adding a new Action for fetching archive status for a list of pv's
+c97656a Add elementcount to PrintPB response
+67d1e7f renaming the Actions
+d00b321 Check for expected values in CA waveform test
+aa552bb Fix bug in CA XML processing for waveforms.
+2b1f310 Add a check for the number of elements we get from a waveform from CA
+ce2b702 Adding a test suite for pva based services test
+579cd01 Splitting Table based requests into seperate service/add archive pv
+59b3580 Refactor names of pvAccess classes
+93d0a1a Adding utility class for easing use of NTTypes
+d76de7a The initial version of pva mgmt service
+706d1a2 Handle zero-length PB files in CountEventsInPBFile.java.
+299b919 Don't need to close stream when using try-with-resources.
+519b904 preparing for epics 7.0.1 release
+c6fc73c Merge pull request #40 from willrogers/validate
+ea1f802 Count invalid as well as valid events in .pb file.
+1294549 Return non-zero value from ValidatePBFile if validation fails.
+22c11e1 Adjustments to channels with pending search requests
+672cfa6 Add some metrics for channels with pending search requests.
+749d2ec Invalid import
+98ab374 Make the workflow transitions synchronized....
+ca4dc63 Expose the archivePVWorkflowTickSeconds in archappl.properties
+3027391 NPE for metrics pags
+811ef45 Use the engine's misc tasks scheuler for metaget's
+af57732 NPE for time span report
+30e912e Add other states to the never connect report
+85ce5e7 Add some more details to the MetaInfo report.
+9f2234f If the type of the PV has changed, accurately reflect this in the UI.
+1341a86 Fix import
+fbe5131 Patch invalid nanos from IOC's.
+7d41708 Small utility to skip the PBFileInfo.
+9b710f1 If there are external CA servers, get the first known sample time from the CA info.
+406e012 Add some documentation on optional retrieval parameters
+d3898b0 Lower the default ca_count
+22b46ee Fix rounding errors with sampling period
+61cb30a Initial support for regex'es for time span report.
+f3e80fd Support and test for params in client access URL.
+0cf8429 Upgrade pbrawclient.jar to 0.0.7.
+d354989 Add some documentation on limits to archivePVWorkflowBatchSize
+0bb0dad Add a new report for more details on MetaInfo.
+1fa74c9 Use a single thead scheduled executor
+5684f01 Add info on when we started the workflow
+94340b8 Never connected report should include PV in a START state
+90e5833 Use the link argument instead
+8bf1202 Change javadoc reference to JDK 8
+02c493e Failed unit test
+bc6f477 Changes for aliases for PV's with fields for Jud.
+2c4e215 If a PV is an alias and we are not archiving the real PV; skip capacity planning.
+9ecdeb5 Add initial code to convert pvData to JSON
+1685b2f V4 PV's may not necessarily have a "value" field.
+e4a0248 Add src file size to log
+c2cb138 Add a log statement...
+82ec66a More updates to logs.
+e7287c1 Update log statement
+d491058 Don't ask the engine for status if the typeinfo does not exist
+92f1677 Do not use the ExtraFields processor for fields that are archived as is.
+bd991cd Sort by name
+aae426c Some improvement in performance for getTimeSpanReport
+8aa6452 Handle and remove extra space in abortArchiveRequestInMins
+6ab813a Add time span report for Andraz
+f33d97d #34 - PVs from IOC's hosted on pcaspy send the SCAN as a string
+886e936 Change location of CAJ per Kunal
+b13713c Cleanup the expanded names functionality.
+d61f1ff Use a consumer for getallExpandedNames
+f11a45d Add a BPL to get all expanded names.
+8c7025c Slightly faster unarchivedPV's
+0ead2ea Javadoc warning
+3336359 Add the appserver startup Epoch Seconds to the currentlyDisconnected PV's report
+0252df4 Check in the archivePV lists etc.
+996603f Add a timeout for abort archive PV requests for Anton.
+97b5ca7 Add the sampling period after jitter factor to PVDetails
+cefe4e3 Expose the SCAN jitter in archappl.properties
+e5f6fe0 Add a jitter factor for testing...
+6ec745f Add the SCAN threads back in to catch stragglers.
+f488629 Add a unit test to test SCAN PV's against rapidly changing PV's.
+1313d87 Add a unit test for the SCAN sampling method.
+1a7f24e Get rid of the scan threads.
+92a3f40 Record the scan processing time even we have no data
+873f17d Merge pull request #28 from jeonghanlee/master
+ada5d62 remove all warnings and errors related with javadoc
+81a189a reduce few more warnings, work in progress
+c4d0f18 clean up javadoc warning and errors - wip
+e18ae69 Merge pull request #1 from slacmshankar/master
+3933c7a Merge pull request #25 from willrogers/pbcount
+4c5a1c0 Correct counting of events in PB files.
+1f8e75c Patch from Han (thanks).
+4fbf571 Improve startup times - reduce engine scheduleOnce time.
+b06adb3 Improve startup times - load ChannelArchiver info later.
+301e0fe Update viewer to latest
+cdbdcc3 NPE if timestamp is null for SCAN'ed channels
+a8d704c Support multiple scan threads.
+3f36cdd Expose the reports in the UI
+ef989be Add a report for the max time between SCANs
+8698b99 Add a SCAN time report.
+3b19a9a Add some metrics for the SCAN thread.
+1886fa3 Remove some code in SCAN mode that was matching values
+9c13c50 Remove some of the buffer stats.
+e2e4f73 Add a small test to make sure the double buffering works.
+c1da05f Remove lines+markes from viewer
+b3faa7b Update the viewer to the latest
+810ae2f Move the scan PV's to a separate scheduler
+2401526 In prep for a separate scan scheduler, remove the ability to set the enginecontext scheduler
+d4b783a Return NaN's as null
+4e2e3e8 URIDecode in the viewer as the appliance encodes PVnames etc
+e886743 One retrieval too many
+50e82a0 Viewer should use relative URL by default.
+d0ca133 Point to archViewer.html in the viewer.zip
+d0962a6 Build the new viewer into viewer.zip.
+b01a2fd Use the SVG viewer from now on
+01b88ea Deleted the previous version of the viewer
+0c2e525 Make the v4 serializer autocloseable and close the channel
+84db923 Increase the number of seeks to determine end of lines to cater to large V4 types.
+14f76cf Fix infinite loop issue when archiving large V4 PV's.
+6531fc9 Upgrade V4 jars
+37a6b30 Reduce max memory for the tests.
+2e2dbe4 Regression from previous channel archiver integration
+5ad7a46 Add unit test for time zones ahead of UTC
+d81d7bb Cater to "nan"'s from the ChannelArchiver.
+fcd1e04 Exception when changing sampling parameters for paused PV's
+ad76a83 Added a link to Han's deployment scripts
+22c9b7f GetMatchingPVs: sublist can't handle lists smaller than what we ask for
+b0f7417 Typos in FAQ
+37a1b1f Add timezone handling to the FAQ
+c61f157 Missing aliases when asking for * and limit=-1 on getMatchingPVs
+2c92bcc Add the Redis NIO2 jar to the project
+7814429 Don't set the MTS/LTS if the user has already set it in the environment
+1b50221 Don't set the STS if the user has already set it in the environment
+9b78b21 getMatchingPVs should honor limit param (also limit = -1)
+a6da166 Incorrect assertion with multget in a cluster
+59b905e Last method in GetURL using HttpURLConnection now uses Commons HTTP.
+8158afe Use Commons HTTP for the PBOverHTTPPlugin as well.
+06c20c3 Pull out the http.keepAlive option... We don't need it anymore.
+f4c9003 Add a timeout on Tomcat teardown and see if that helps the unit tests run.
+770f96e Changes to turn off KeepAlive if the remote proxy has it turned on..
+cf46b61 Upgrade hz to 3.7.1
+2cbf757 Don't use the URI for file:/// paths.
+acd1ded Add name of PV for exceptions
+3b5b300 Merge pull request #20 from jeonghanlee/master
+cf32f1d fix pre/code style
+ca22c17 fix 13 javadocs warnings.
+df1d91d Typo in boolean JSON
+ebf2119 MultGet had a bug with determining post processors.
+8e4a38a Add a .qw JSON response for the viewer in prep for error bars
+5b1f7bc Support for other NIO2 file systems registered with the VM
+df175a3 Fix broken unit tests
+39b4c88 Issue 18: putPVTypeInfo should handle aliases better.
+cb5e83b getAllPVs without the pv argument should include aliases
+4f19823 Add support for matching names from external appliances..
+a0bd4a0 Print the bits for the structure
+5877fe5 Some test code to use the bitset from pvAccess
+c493d9d Fix boundary conditions for time-based iterators
+7c05c95 Add userTag to the PB message as a full fledged field.
+4f731c1 Do not try to determine V3 fields for V4 types.
+53c3ef1 Lower log level for key not found
+23e6fe3 Add support for redis persistence
+73be345 Add a flag to turn off the auto refresh of PV status for tests.
+2aa323e Change the wait times for test
+c628478 Updated the viewer to the latest release with some changes for Heinz
+2f061c8 Add a delete column to the Paused PVs report for Dejan
+c5c02e4 CLose the browser before closing tomcat
+9e06c9d Rename test as we have two tests with the same name
+b1a82d4 Use channel to get the host name
+6824b21 Update testing to deal with latest version of FF
+b7fcc9e Regression with archiving fields..
+9ed94be Merge pull request #17 from jeonghanlee/javadoc
+7aaf63e reduce javadoc errors and warnings.
+3c724a0 NPE in BasicDispatcher when requestPath is empty
+d734436 Deal with incorrect nanos without exceptions.
+651c3a6 Add a unit test for zero byte files and ETL...
+d863dc4 Don't start the archive workflow if userparams is null
+56d82ea Use a slightly more efficient method for filter integration.
+a95d065 Refactor to catch exceptions from computing PV metrics from individual PV's.
+87421cf Add a BPL for archivedPVs - this is the opposite of unarchivedPVs.
+493e9c8 Add support for channels using DBE_PROPERTIES.
+0687be1 Abort should abort a request regardless of whether we have a PVTypeInfo or not.
+dd7c602 Fix bug where the EPICS alias logic for fields (.DESC etc) was not determining the real name correctly. This would lead the a subset of PV fields never finishing the archiving workflow. Thanks Bruce for finding this bug.
+0a0cb36 Add tests to make sure that EPICS alias name for fields are handled correctly.
+215b5f5 Add support for specifying the controlPV for conditional archiving as part of the policy. The control PV specified by the user (if any) is added to the pvInfoDict as "controlPV". Use the same name "controlPV" in the pvPolicyDict to specify the control PV from the policy.
+73838c0 Policy name is incorrectly set to empty string when archiving specifying details. Use a trim() in the JS to remove spaces.
+c7ad573 Fix unit tests broken by the V4 generic bytes changes.
+f057d75 Fix various bugs related to archiving generic V4 PVStructures. Switch to using the SerializationHelper and for now, serialize the full structure. Tested archiving and retrieval thru the V4 proxy for a complex V4 PV.
+ae418d0 Reduce thread counts for clustering when deploying all components on one Tomcat container
+6bb39b3 Update clustering to 3.6 - Tested restart of engine and mgmt webapp components.
+c07387a Merge pull request #15 from jbobnar/aliassearch
+b117c1d When searching, search the alias PVs list as well.
+caddacb Fix broken unit test...
+2440814 Add a small utility to slice a PB file based on timestamps. Can be used to eliminate selected data from a file...
+ecf9e1c The BPLTaglet strips out the - in -1. Change -1 to something that will be ignored by the taglet.
+b3ff06e Increase timeouts for unit test.
+523cd20 One more fix for the CnxLoss unit test
+1b8b824 Remove hard coded paths from the MultiPVClusterRetrievalTest
+b85dc6b Fix occasional unit test failures with CnxLostTest.
+75ddac8 Update pvData and pvAccess jars to the 4.5.0 release
+65967c9 Better error messages on the UI when the ConfigService does not initialize correctly.
+ee2b0bc Add a check for java and jar in the PATH in quickstart.sh per Han
+3ced1f0 Remove log4j.props from build path
+380d792 Merge pull request #12 from mkatdls/master
+bba6cb3 Merge branch 'multipvretrieve'
+7c23017 Fixed an error in the boolean logic; changed || to && on 553
+1d1de23 Merge branch 'multipvretrieve'
+f62ed7b Merge pull request #4 from slacmshankar/master
+404231a Merge branch 'multipvretrieve'
+6e26202 Missing class necessary for cluster retrieval has been added
+6930579 Add a utility to print the first and last times from the PBFileInfo for all files in a folder.
+7ff2952 Added some logging packages to the class path
+0737b31 Data retrieval servlet edited to move all fields together
+26124b6 Data retrieval servlet now services multi-pv requests
+df02d1a Unit test for multi-pv retrieval across cluster
+cff8532 Skip a incorrect error message in the case of the blackhole plugin. Capacity planning tries to cast everything as a ETLSource; so converted the error message into a warning
+c63d529 Give appliances first change to serve external content.
+f152563 NPE determining last line in some cases
+25fbb0d Added exit command to GenerateData because it wasn't terminating
+13faacc Undo changes in PBOverHTTPStoragePlugin.java
+8586545 DataRetrievalServlet now accepts multi-PV calls over JSON/HTTP
+0a7d9eb Method for multiple PVs added (getDataForPVs)
+6599c4c Commenting the code for reader's benefit
+ad5c92d Converted Arrays to Lists
+905bdcb Combine single- and multi- PV calls into one class
+4809481 Merge pull request #2 from mkatdls/HEAD
+0903f9c Few changes in DataRetrievalServletTest.java JUnit test file
+86652d0 Update web.xml file to fix Servlet names.
+a12c2a8 Untested MultiPVDataRetrievalServlet created
+cfb365e Make the document images responsive
+fc262e1 Add documentation for CS-Studio integration.
+c60cc0b Merge pull request #1 from slacmshankar/master
+50a6411 Added requisite servlet for multi-pv data retrieval.
+e74fdb7 Automatically set the bootstrap active flag in the docs.
+db99523 Pulled in Ambroses changes for the viewer
+377e540 Merge pull request #7 from ambrop72/engine-retrieval-fix
+b48399d Move docs over to bootstrap as a precursor for the main UI. Fix some doc issues; add a line for conf_original.
+e7747f9 MergeDedupConsumer: Use the full timestamp for deduplication not just whole seconds.
+ae53b00 Pull out the logging from SyncStaticContentHeadersFooters as folks may not have the logging jar in the classpath.
+bd22e51 Use TOMCAT_HOME
+02a98b3 Add log4j to SyncStaticContentHeadersFooters calls
+c47e816 Issue #13 - WARS are not being unpacked. Michael Kenning kindly provided an additional script; this was merged into the deployRelease script itself.
+84aeb40 When archiving, add ability to specify policy without needing to specify sampling method and period. This applies to both the BPL and UI.
+b30f1a6 Set the policyName in the typeinfo.
+221024c QuickStart now needs to have log4j in classpath for the
+2c0a74d Support for specifying the appliance as part of the policy. Add a value to the dict called appliance with the identity of the appliance you want to assign the PV to. Appliance specified as part of the archive request will override.
+eff9b44 Template replace the archivePVWorkflow batch size and minimumSamplingPeriod in mgmt.js. This should fix a long standing issue with hardcoded validations for archiving parameters.
+bce878f Refactor to support template replacement for Javascript files
+5b8851b Change template replacement to support multiple paths.
+b64c711 Make the archive PV workflow batch size configurable for Bruce
+0e3f3ee Support for supporting the appliance as part of the archivePV request Tested using the plain call and the JSON request
+9fae9d2 First cut at specifying the appliance as part of the archivePV request
+6f2f2bf Added an example to the doc as to how to use JSON. However, this does not show up yet in the javadoc because of a taglet bug. Will fix that later
+9c05bcc Upgrade CAJ to caj-1.1.16.jar
+54501c4 Forgot to parameterize a variable
+93d0aa7 Add a genric internal object to JSON for the engine to debug any connectivity issue. Use engine/bpl/getArchiveChannelObjectDetails?pv=xyz to see the details. For many fields, we simply print null/non-null for now; we can enhance later if needed
+3b7a710 Write the whole connection state string in PVDetails
+9bcf9c9 Is last known event is null; set last timestamp to null in PVMetrics
+d3658a0 Add a call to set last timestamp from IOC just before displaying in PVMetrics
+9362538 Add internal state to PV Details
+97ac061 NPE when archiving Gateway PV's ( reported by Heinz; thanks)
+213c4cb Add support for retiredPVTemplate; this is a mechanism where we can delete the PVTypeInfo from the system; however, the data remains on the stores. We use a template PVTypeInfo as the basis for a temporary typeInfo; determine the DBR_TYPE based on the last known sample.
+cc089bd Build the viewer as part of the regular server build
+55e7ae4 Include the web based viewer as a submodule
+63f7222 Prepare for viewer inclusion. Add licensing for underscore
+de54cec If appliances.xml has a server whose name cannot be DNS resolved, we seem to be stuck in startup. Fix for Jud
+9710202 Regression - we were not storing the DESC field because it has a different type from the main PV. Added a override.
+826d890 Trim spaces from the PV's text area for Patrick. For someone managing the appliance, this makes life easier as they get requests from folks as CSV, spreadsheets and other formats capable of introducing spurious spaces at the beginning of the end of PV names.
+891c4bd Skip adding older datasources if we know that a datasource has an event older than the start time of the request. This should let us survive NFS freezes a little bit more and should also help FRIB where we have a long line of data sources
+42f84c4 Fix broken unit tests
+a12ee00 Cleaned up the corner cases for the iterator test
+64357c2 Make sure we get the right kind of iterator for various start and end times. Add a unit test for the same. Unit test avoids boundary conditions for now. Will work on that next.
+88c7601 Fix potential performance bug where we used a time based iterator too soon (thus taking lots of time).
+18b1452 Tested integration where we had a ChannelArchiver and a external appliance (of course, with non-overlapping PV's)
+f09353a Able to add and save an external EPICS archiver appliance
+c6a5b2a Initial support for proxying external EPICS Archiver appliances Support from the UI
+1915e46 Point to package-summary.html in the doc
+dee4d64 Change documentation for JDK 1.8 Add a small description to the developer's guide - this is basically the email I sent to Mike (DLS)
+50aae61 Change text documentation to 1.8 JDK
+0f223a9 Update readme to point to generated doc
+cb91d36 Move documentation to GitHub
+88880ad Optimize the bulk pause and resume; this makes one request to the engine and ETL for pausing and resuming from a list of PVs. Changed the samples to incorporate this change
+ead1234 Ability to pass in PVs to pause and resume as JSON in a POST body.
+3d93188 Make the samples executable.
+667db52 Add a "archivedPVsNotInList" BPL for Jing
+3bb8964 Set the cluster client thread pool size
+39733ee Turn off BPL doc for Igor's retrieval actions
+ea542cb Turn off warnings.
+b99a1d3 Merge branch 'master' of /scratch/Work/git_repos/epicsarchiverap
+62d54fa Merge pull request #1 from jbobnar/master
+1321041 Implementation of the statistics and optimized post processors.
+d859a20 Add some more documentation
+c348930 Clean up the template replacement...
+716e8b0 Use the viewer for the quick chart as well.
+3b040da Template replacement in the viewer's index.html for Igor. For now the viewer.zip is outside of the repo
+d3cbd00 Remove the need for maximumNumberOfLifetimesInInstallation. Deprecate property and remove usage
+5058554 Add disk usage monitoring to admin guide.
+afcab07 Process "true" and "false" correctly in getNamedFlag
+fb10644 Initial support for etlOutofStoreIf - Using named flags to prevent data from leaving a store...
+4e41e15 FIx NPE on deletePV for unit tests
+4ff264d Change the name for enumeration labels to ENUM.
+626c7b6 Add a get getMetadata to the retrieval BPL for Igor
+ebfc699 First version of making getPVsMatchingNames faster. For now, this is in the retrieval component only. If this works well, we'll move the other code to using this.
+6c90bda Some work into improving the speed of the PV name searches.
+10d4131 Added some notes on monitoring exceptions/FATAL messages in the log files.
+51cf89e Add ENUM labels to the metadata if present
+b9e8131 Initial support for named client configurations. Mostly commented out for now but will be integrated with the new viewer later
+3c0944d Undoing the last change to the mergededup operator as it did not seem to help
+7f09aad Occasional test failures from getting the same event multiple times from the engine and STS. We were taking care of the main usecase; this was the case where we had not shipped any events yet. If the timestamp is the same, skip the second event.
+d7ea8ca If we get an exception when resharding, log it as well.
+344b2a2 Reshard should use a date in the distant past (instead of creation time) but skipExternalServers when moving data from one appliance to another.
+3c6f557 Add a skipExternalServers to the retrieval request when we want to bypass the external servers completely.
+cce8a49 Remove 1.8 code that snuck in...
+e43fa4c First attempt at using named flags for controlling ETL into destination. Unit test for the same
+934618e Initial support for named flags. Added support in the configservice and BPL to get/set
+9f4a659 Move check for archive workflow completed to static class.
+e2afa96 Inherit creation time from the source PVTypeInfo. This seems to serve us much better
+9968c37 Rename now inherits the creation timestamp from its parent Make sure resharding cleans up behind itself Add checking of creation timestamps and cleanup to resharding unit tests
+78658c0 Initial cut at including mean and stdz in the same response for error bar line graphs
+5ebf1e1 Add a limit to getAllPVs for the viewer.
+1408182 Ignore mac specific files
+8191482 Close the channel in the matlab response even if we have an exception when converting to Matlab.
+52d4bae Fix unit test delete folder after complete
+ed07feb Fix bug where we were not adding cnxlost headers when starting the appliance and also on pause/resume. Added a unit test for the same.
+86ff564 Add shim for DBE_PROPERTIES; there is no actual code behind this yet. Just moved many of the method around and stopped exposing the implementation
+b00b668 Upgraded the pbrawclient to pvrawclient-0.0.4
+53b0722 Tigthen up compiler. All switch statements should cover all enum's
+f09972c Tighten up compiler - case statements should have defaults and not fall through
+4ff60c0 Remove the need for a recordtype method in the PV interface. We store the record type as a ScalarString DBRTimeEvent in the V3 PV. This is what it was in the V4 PV anyways.
+b42329e Update a testing jar (commons-exec)  to fix some unit test failures
+148baf2 Add unit test for Jud's usecase. We have a high rate PV (with more than one sample per second). We ask for data with the same second (but perhaps different nanoseconds)
+0702008 Updrade testing jar(s) to cater to latest firefox. Apparently, some hook got deprecated in FF 37.
+96d3edd FirstSamplePP can sometimes add very old data to the start of the stream. This is because this is not a consolidated stream; so, to satisfy PV's that do not change much we have some code to add the last known sample at the end of the wrap. However, if an ancient stream is included for whatever reason, that always wins for the lastknownsample. So skip this but offer an opportunity to add samples after all the streams are processed. CATER 124836
+f168e9e Generate release notes from git log
+1739814 Add a gitignore and remove the hg equivalents
+a20fce7 Add a README.md
+ab80037 Remove the final reference to a V3 constructor and hide behind a factory. Make the constructors package visible only.
+4960d4c Support for V4 in the details page and quickchart.
+b482edf Add a boolean to PVTypeInfo to indicate if we use pvAccess or not. One option was to leave the pva:// prefix in the name; that would have involved less changes but would have been messy later on. I've decided to strip the prefix from the name and instead store a boolean in the PVTypeInfo. Thus, V4 PVs are nothing special from a storage/retrieval perspective. We archive pva://double01 but retrieval we ask for double01.
+792f011 Move the V4 Prefix to PVNames
+16c7a5a Support for EPICS V4 PV's from the ArchiveChannel as well. We now have retrieval as well. However, the metadata is still V3 style; one channel for each metafield. Need to improve this.
+3016153 Support for V4 arrays/enums
+f54d66e Support for archive pva://double01
+e329f55 Move the V3 PV construction to a factory
+3c06545 Clean up the computeRate method in metaInfo
+89a0113 Copied over EPICS_V4_PV from various sources and got it to compile with a few TODO's Still need to hook it in.
+07d41bc Make the ConnectionState an enumeration accessbile to others in this package
+ae21440 Upgrade pbrawclient to latest version - this has bug fixes for URL encoding the PVName correctly.
+85eb6c4 Move metadata to PV's instead of a two step with ArchiveChannel. Should reduce the memory footprint a little as well as we no longer have archive channel's for each metadata PV. Also first step in using DBE_PROPERTIES.
+fba6b26 Use another listener event to eliminate the link between the PV and PVMetrics. We now fire a droppedSample event on the listerner which should increment the count in PVMetrics.
+af4ccb5 Move many metrics oriented methods from PV/EPICS_V3_PV into PVMetrics. This reduces the number of methods in the PV interface and makes it easier for V4.
+73285ca Eliminate unused methods in the PV interface - V4 migration
+e791cae Add overrides annotation to aid refactoring
+e5132f2 Move some of the methods into the interface
+aa7c8eb Move some of the controlPV methods into its own interface - V4 migration
+f00ced3 More V4 refactoring get rid of the older V4 code - seems much easier to refactor this way.
+915ab0f Divide by zero when absorbing V4 metagets
+5fb95ce Set the CAJ DBR to null as soon as we are done with it and make it non-final.
+4443948 Update CAJ to caj-1.1.15.jar. Remove the BPL for the CAsearchManager details as that was very specific to the previous implementation.
+91cb25e Add a getArchivedWaveforms for Bob Hall
+459a876 Add some doc on when we drop samples because of invalid timestamps
+397339a Bug reported by Jud. The corner case for determing if we have enough ETL threads is incorrect. It should be > not >=
+bf8bd42 Add cnxlostepsecs to the headers from engine retrieval if the channel is currently not connected.
+ff5e87d FATAL error message is misleading; the ints are autoboxed separately and string concated and we get 21 instead of 3(2+1)
+9b613cf Add refcounted channels to engine metrics to see if we really need this mechanism
+42adc7a Add the ACCESS_CONTROL_ALLOW_ORIGIN to error response also.
+ee3f053 Recent changes to jsvc default the current working folder to /. This explains some of the missing logs when people use more recent versions of Tomcat. Added a -cwd ${CATALINA_BASE}/logs \ to places where it made sense.
+b3389ac When proxying over data from other appservers, copy over some of the headers
+c150faa Fixed NPE's on quickchart on fields; thanks Martin for pointing this out. Also fixed status to use PVNames.determineAppropriateTypeInfo - consolidate into one place all the confusion of dealing with aliases/fields etc.
+a7eeebc The caplotbinning operator does not insert year change headers for the raw response correctly. Added a new class that wraps the ArrayListEventStream and does this.
+15e4615 Fix JSON Response to generate valid JSON. Use a separate toJSONString method to make the unit tests happy.
+15badb9 String samples should return proper JSON values
+e552bbe Add the content type and other headers before opening the response. MergeDedup now owns the respose outputstream and must close it .
+20ec1a0 Fix broken unit test after LineByteStream changes. Make the PBFileInfo more resistant to corruption in the tail.
+b19a84a Incorrectly flushing the response buffer when sending back an error message.
+acd506e Add a test to make sure we get the last event in a PB file from the changes to LineByteStream. Simplify the logic to position to the end bound in a bounded FileEventStream
+cd13484 Add a couple of more test lines to the LineByteStream test to make sure we are reading the values we expect.
+8a902a8 Bug fix - Occasional PBParseExceptions when using the .raw response. One of the root causes is a bug where we were returning partial PB messages from LineByteStream when the start and end bounds were specified and the message fell across two different read chunks at the end of the file. Fixed this to not return bytes if and only if we encounter any newlines. Also added an assertion and a boundary condition fix in readNextBatch; this prevents a incorrect ArrayIndexOutOfBoundsException in readLine(ByteArray bar) which causes us to increase the ByteArray size incorrectly. Added 2 unit tests to test the two versions of readLine for this condition
+b67c445 Add BPL and unit test to manipulate the fields being archived as part of the PV.
+c2d9f9e Optimize the bulk check status call to make one call to the engine. Fix bugs with aliases in GetPVStatus
+1793f3d Add BPL and unit test to manipulate the fields being archived as part of the PV.
+c30e5d8 Add a Unarchived PVs BPL to quickly determine PV's that are not being archived from a list of PVs Can be passed in as JSON/CSV/raw text.
+45d4ba3 Optimize the bulk check status call to make one call to the engine. We should consider doing this for the bulk pause/resume as well.
+66742b3 Unit test stub for generating data
+8ca67e5 Shutdown the miscTasksScheduler on shutdown
+317dce4 Shutdown the miscTasksScheduler on shutdown
+15c40ed Small script to determine unarchived PVs in a list of PVnames
+2bae6a7 Use the template tag to hide sample rows... Seems to work in firefox/chrome
+d7e4c5e Delete PV's should also remove aliases for the PV.
+1f6ce64 Refator - move the removal of the channel from the channellist outside of WriterRunnable - prep for V4
+9a5f7a0 The caplotbinning operator should upcast all samples to DBR_DOUBLES. Otherwise, we send the PayloadIndo as an Integer but stuff the stream with doubles.
+9a0921c Remove older EPICS V4 softIOC and tests from the system. EPICSV4 has changed substantially since we did the proof of concept.
+5b41bb5 Add sample script to remove the extra fields (HIHI, LOLO etc) from a PV.
+2ca2b22 Fix bug in pvDetails where we were showing the details of the main PV when asking for details of a field.
+bc51a11 Add a script to rename PV's from a list.
+c0c129b CATER #122371 - LastFill/FirstFill should pick up lastKnownEvent even if we have only one event.
+7cd9014 Add sample script to remove the extra fields (HIHI, LOLO etc) from a PV.
+661b26e Apply policy cleanup patch from Michael
+97ce465 NeverConnectedPVs should only include for whom we have started the archive workflow.
+1b89e4b Optimize the execution of policies by caching the ExecutePolicy object. The cache is expired after a minute; so we may take upto a minute to reflect a changed policy...
+394a0a9 Refactor to support possible optimization of policies
+3b58f47 Lookup fields as part of stream only once during a process request.
+9c6ca51 Move the computation of initial delay in kicking off the archive PV requests into the ConfigService. Note, this is an approximation for "Have all the appliances started up?" Need a better solution.
+25ef586 Issue 12 - Throttle the archive PV workflow to a 1000 PV's at a time Uploading 57K PVs using archivePV BPL now functions a little bit better; we give each PV a chance to be measured and complete the PV workflow. This would mean that we can tolerate upto 1000 invalid PV requests into archivePV. The ones added later will queue up behind the 1000 that will never connect.  In this case, use the abortArchivingPV BPL to clean up the invalid PV requests. Uploading 57K PV's into a 4GB quickstart VM completed in less than 3 hours ( approx 1 min per batch of 1000 for measuring the rates and the rest to execute the policies)
+742ffaf Issue 12 - Use the AsyncEventBus to see if this helps with issue 12
+936fc74 Initial support for timeranges for data retrieval for William
+6247247 Use JAVA_OPTS from the environment if it is defined
+a502f0a Issue 12 - Publish only those events that need to cross component/appliance boundaries. Test using archivePV of 50K PV's
+dd4f7b4 Typo in quickstart
+753a1d7 #9 Convert ADEL and MDEL and pass them to the policy as numbers Fix fallout in the PVDetails page
+8a3871b Incorrect check for max datasources
+c99eb03 #9 Convert ADEL and MDEL and pass them to the policy as numbers
+e05d203 #10 - Trying to add ~50k PVs in one go fails in a surprising place Patch from Michael It seems that PythonInterpreter is depends quite heavily on PySystemState. There can be more than one PySystemState instance, but if not explicitly created the previous one is re-used via. a static member of the 'org.python.core.Py' class (wonderfully un-thread-safe). This is what holds the state of the global modules, including the logging module.
+cf6dc68 #9 Look up scan value in the enum and send that across
+fd0ef75 Increase maximum sampling period to 86400 for Sashi
+3261d4a Add admin guide.
+af0a529 Add a unit test to make sure we can execute policies multiple times in a row without leaking FD's
+cd1889f Add cleanup after executing the policy
+f7e9cb5 Add admin guide.
+089cf3c Fixes for quickstart.sh from Michael Add .hgignore
+0edd724 Increase the number of lifetimes in the properties files to 5. Cater to this in the metrics screen. Add a more readable message when adding jobs to ETL;
+303b1f1 Change the details logo to abort if in initial sampling mode.
+8e450a1 Use the prototype .json PVTypeInfo for  tests
+0bfc3b9 Added a deadBand post processing operator for Michael. This is principally intended for decimation.
+d32ffa3 Support deletes of external data servers
+3e27c09 Add version to the home screen
+dba64ca Add unit test harness where we can supply raw data
+86f0546 Support for pause from the disconnectedPV's report
+5ca0f5a Per Michael, we should be monitoring alarm changes as well.
+6edd26a Add unit test harness where we can supply raw data
+cce2b1c putPVTypeInfo now supports adding new PVTypeInfo's into the system. This is primarily meant for the unit tests; the newly added PV's are forcibly paused.
+21cbe35 Add lookup, pause and resume multiple PVs from the home screen
+289c603 Pause and resume now can take multiple PV's as arguments.
+54a51ca Fix a bug where capacity planning is incorrectly getting Infinity as the time consumed by ETL. This causes some spurious error messages in the log.
+c8e0c2f Skip postprocessors that return null event streams. We'll always a encounter a NPE and some mime responses absolutely need a desc to function correctly.
+ea07dc4 NPE when we have no data. Incorrectly returning a null description; should return the srcDesc if we have one.
+abbbe8c Reduce logging levels in case of empty data from the engine
+490738e NPE when desc is null.
+d85a413 Add a engine BPL to display some of the CAJ ChannelSearch parameters for a PV. Intended for diagnosing reconnects.
+329c864 Add some more CAJ details to the disconnectedPV's report
+08bff49 Consistent binning for Michael; we store the sample with the timestamp before the starttime and send that as one sample in the post processor.
+eb90e8c Add NOTICE and attributions
+b47da7e Add a CA plot binning post process for Michael Davidsaver - first cut
+478816a Changed documentation for the reducedata/decimation feature
+e5081b9 Add the nofill versions of the postprocessors to the data reduction unit test
+573cbfe Consistent binning for Michael; we store the sample with the timestamp before the starttime and send that as one sample in the post processor.
+9025e01 Added a optional call to get latest metadata from the engine as part of data retrieval Add a fetchLatestMetadata=true to the retrieval request
+1c612a7 Some refactoring for testing reducedata with other post processors Brought some of the older code back; we now infer firstBin and lastBin only if these have default values. Needed for the fillOperators
+67684e7 Reduce the time frame for unit test
+deeb452 Add a unit test for reducing data using other post processors This needed some changes throughout; mostly to do with empty streams and reduceddata support Will probably refactor the empty streams a bit.
+4cbedab Initialize lastBin to Long.MAX_VALUE in order to cater to the reduceData/postProcessor use case.
+54b233b Reduce log levels
+2b0f541 firstSample and lastSample were including the event before the start time of the data retrieval request. Pulled these out to make sure that these operators return the same number of entries as mean/max/min
+702e120 Add version information to the getApplianceInfo. Note that this is the version string from the mgmt component...
+c6a0ce2 Explicitly update metadata once a day rather than in this convoluted fashion.
+487699b Add size of engine scheduler queue to details page
+45e4641 Add time elapsed since CA search request to pv details
+dcc36b6 Changes to logging
+5b2a7cb Exception when getting details for a fieldname PV where the main PV is not getting archived.
+53ebdc9 Add a unit test and some changes for dealing with PBParseExceptions during retrieval. We want to make sure we skip the event and not the stream when we encounter a PBParseException
+711fa1b Print the version number on startup
+7a91fc7 Bug with quickchart; velocity seems to use one of the jars that was removed. Rather than bring this jar back in, I removed velocity and refactored using a home grown template engine. This is the only page that had any server side templating at all; always been on my task list to move this also to client side JS. Thanks Jud for pointing out the bug.
+92db337 Skip adding jobs into the ETL if the PV is paused. This implies we have to consolidateOnShutdown when pausing the PV.
+76778b9 Fixes PSI issue for long PV names. Per Dirk, we could use the NAME$ to determine the true name for the PV. We ask for NAME and NAME$; if NAME$ is present, we use that; if not, we should use NAME..
+4ec6c10 Add SCAN vs MONITOR to faq
+8bb23a0 Add a unit test for reduced data with daily ETL's
+dfca2fe Upgrade junit/unit testing jars
+7aff16c Upgrade commons exec to 1.2
+378456a Changes to the shutdown sequence. We now precompute chunkKey on adding ETL job to eliminate shutdown exceptions. Change shutdown sequence; a delay did not seem to help in the single tomcat case Turn off spurious exceptions on shutdown. grep exception on unit test logs should work again.
+8607ec2 Precompute chunkKey on adding ETL job to eliminate shutdown exceptions.
+c57b29b Initial version of reduceData support + unit test
+a949151 Consolidated previous changes during the import from mercurial. To see what happened before this, check out the mercurial repo.

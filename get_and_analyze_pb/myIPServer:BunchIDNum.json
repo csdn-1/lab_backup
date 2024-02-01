@@ -1,0 +1,33 @@
+[
+    {
+        "meta": {
+            "name": "myIPServer:BunchIDNum",
+            "PREC": "0"
+        },
+        "data": [
+            {
+                "secs": 1697059505,
+                "val": 256,
+                "nanos": 703270426,
+                "severity": 0,
+                "status": 0,
+                "fields": {
+                    "cnxlostepsecs": "0",
+                    "startup": "true",
+                    "cnxregainedepsecs": "1697077331"
+                }
+            },
+            {
+                "secs": 1697078214,
+                "val": 180,
+                "nanos": 948662362,
+                "severity": 0,
+                "status": 0,
+                "fields": {
+                    "cnxlostepsecs": "1697077561",
+                    "cnxregainedepsecs": "1697078214"
+                }
+            }
+        ]
+    }
+]
